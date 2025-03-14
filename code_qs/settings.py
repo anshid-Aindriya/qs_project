@@ -123,6 +123,10 @@ STATIC_ROOT="static_root"
 MEDIA_URL="/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+# Use WhiteNoise for serving static files in Render
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
